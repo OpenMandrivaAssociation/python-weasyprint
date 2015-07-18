@@ -1,11 +1,14 @@
 %global pypi_name weasyprint
 %global pypi_oname WeasyPrint
+%if %mdvver < 201500
+%define py3dir %{_builddir}/python3-%{name}-%{version}-%{release}
+%endif
 
 %define python3 1
 
 Name:           python-weasyprint
 Version:        0.19.2
-Release:        %mkrel 5
+Release:        1
 Group:          Development/Python
 Summary:        WeasyPrint converts web documents to PDF
 
@@ -39,7 +42,7 @@ Group:          Development/Python
 Requires:       %{pypi_name}
 
 BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3-setuptools
+BuildRequires:  python3egg(setuptools)
 
 %description -n python3-%{pypi_name}
 WeasyPrint converts web documents to PDF
@@ -51,7 +54,8 @@ WeasyPrint converts web documents to PDF
 %apply_patches
 
 %if %python3
-cp -a . %{py3dir}
+pushd .. 
+cp -rp %{pypi_oname}-%{version} %{py3dir}
 %endif
 
 %build
