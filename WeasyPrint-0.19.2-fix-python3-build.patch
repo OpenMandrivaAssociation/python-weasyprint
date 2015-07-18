@@ -1,0 +1,22 @@
+diff --git a/setup.py b/setup.py
+index 7420681..e9d0c81 100644
+--- a/setup.py
++++ b/setup.py
+@@ -14,13 +14,13 @@ import re
+ import sys
+ from os import path
+ from setuptools import setup, find_packages
++import io
+ 
+-VERSION = re.search("VERSION = '([^']+)'", open(
++VERSION = re.search("VERSION = '([^']+)'", io.open(
+     path.join(path.dirname(__file__), 'weasyprint', '__init__.py')
+-).read().strip()).group(1)
+-
+-LONG_DESCRIPTION = open(path.join(path.dirname(__file__), 'README')).read()
++, encoding='utf-8').read().strip()).group(1)
+ 
++LONG_DESCRIPTION = io.open(path.join(path.dirname(__file__), 'README'), encoding='utf-8').read()
+ 
+ REQUIREMENTS = [
+     # XXX: Keep this in sync with docs/install.rst
