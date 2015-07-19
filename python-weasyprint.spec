@@ -2,7 +2,7 @@
 %global pypi_oname WeasyPrint
 Name:           python-weasyprint
 Version:        0.19.2
-Release:        1
+Release:        2
 Group:          Development/Python
 Summary:        WeasyPrint converts web documents to PDF
 
