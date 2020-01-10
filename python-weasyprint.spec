@@ -45,7 +45,7 @@ WeasyPrint converts web documents to PDF
 %prep
 %setup -q -n %{pypi_oname}-%{version}
 
-%apply_patches
+%autopatch -p1
 
 pushd .. 
 cp -rp %{pypi_oname}-%{version} %{py3dir}
