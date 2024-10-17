@@ -7,7 +7,7 @@ Group:          Development/Python
 Summary:        WeasyPrint converts web documents to PDF
 
 License:        MIT
-URL:            http://pypi.python.org/pypi/%{pypi_name}
+URL:            https://pypi.python.org/pypi/%{pypi_name}
 Source0:        http://pypi.python.org/packages/source/c/%{pypi_oname}/%{pypi_oname}-%{version}.tar.gz
 Patch0:         WeasyPrint-0.19.2-fix-python3-build.patch
 
