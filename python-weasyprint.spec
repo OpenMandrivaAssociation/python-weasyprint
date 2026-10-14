@@ -1,6 +1,6 @@
 Name:		python-weasyprint
 Version:	68.0
-Release:	1
+Release:	2
 Summary:	The Awesome Document Factory
 License:	BSD-3-Clause
 Group:		Development/Python
